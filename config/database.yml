@@ -1,0 +1,16 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: oh_shipt_development
+
+test:
+  <<: *default
+  database: oh_shipt_test
+
+production:
+  <<: *default
+  database: oh_shipt_production
