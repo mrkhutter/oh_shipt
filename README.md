@@ -17,7 +17,7 @@ Then visit the application at http://localhost:3000/
 
 ## Resources and References
 
-[![Our Study Book](https://www.railstutorial.org/book)
-[![Rails Guides](http://guides.rubyonrails.org/)
-[![Ruby API](http://ruby-doc.org/core-2.2.0/)
-[![Git Documentation](https://git-scm.com/documentation)
+[Our Study Book](https://www.railstutorial.org/book)
+[Rails Guides](http://guides.rubyonrails.org/)
+[Ruby API](http://ruby-doc.org/core-2.2.0/)
+[Git Documentation](https://git-scm.com/documentation)
