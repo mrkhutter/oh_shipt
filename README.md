@@ -1,4 +1,4 @@
-# OH SHIPT: Something Went Wrong - A Issue Tracking for Shipt Products
+# OH SHIPT: Something Went Wrong - Issue Tracking for Shipt Products
 
 A sample project used for empowering the Shipt Study Group.
 This project will evolve into a defect and issue tracking system for the Shipt platform products.
