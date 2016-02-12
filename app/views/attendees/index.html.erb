@@ -1,0 +1,8 @@
+<h1>Attendees#index</h1>
+<table>
+  <% @attendees.each do |attendee| %>
+    <tr>
+      <td><%= attendee.first_name %></td>
+    </tr>
+  <% end %>
+</table>

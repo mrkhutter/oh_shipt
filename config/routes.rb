@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'attendees' => "attendees#index"
+
   get 'lessons' => "lessons#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
