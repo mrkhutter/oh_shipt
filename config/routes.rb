@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'defects/new'
+
   get 'attendees' => "attendees#index"
 
   get 'lessons' => "lessons#index"
