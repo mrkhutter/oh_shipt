@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160211173339) do
+ActiveRecord::Schema.define(version: 20160322170419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,4 +25,41 @@ ActiveRecord::Schema.define(version: 20160211173339) do
     t.string   "department"
   end
 
+  create_table "comments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "defects", force: :cascade do |t|
+    t.string   "error_number"
+    t.string   "error_customer_email"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.string   "severity"
+    t.integer  "user_id"
+  end
+
+  add_index "defects", ["user_id"], name: "index_defects_on_user_id", using: :btree
+
+  create_table "puppies", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.string   "adoption_status"
+  end
+
+  add_index "puppies", ["adoption_status"], name: "index_puppies_on_adoption_status", using: :btree
+
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "role"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "defects", "users"
 end
